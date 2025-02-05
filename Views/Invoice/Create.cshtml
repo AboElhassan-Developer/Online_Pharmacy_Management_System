@@ -1,0 +1,56 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.InvoiceViewModel
+
+@{
+    ViewData["Title"] = "إنشاء فاتورة";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Date" class="control-label"></label>
+        <input asp-for="Date" class="form-control" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PatientId" class="control-label"></label>
+        <select asp-for="PatientId" class="form-control" asp-items="@(new SelectList(ViewBag.Patients, "Id", "Name"))">
+            <option value="">اختر مريضًا</option>
+        </select>
+        <span asp-validation-for="PatientId" class="text-danger"></span>
+    </div>
+    <h3>تفاصيل الفاتورة</h3>
+    <div id="invoiceItems">
+        @for (int i = 0; i < Model.InvoicesItems.Count; i++)
+        {
+            <div class="form-group">
+                <label asp-for="@Model.InvoicesItems[i].MedicineId" class="control-label"></label>
+                <select asp-for="@Model.InvoicesItems[i].MedicineId" class="form-control" asp-items="@(new SelectList(ViewBag.Medicines, "Id", "Name"))">
+                    <option value="">اختر دواءً</option>
+                </select>
+                <span asp-validation-for="@Model.InvoicesItems[i].MedicineId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.InvoicesItems[i].Quantity" class="control-label"></label>
+                <input asp-for="@Model.InvoicesItems[i].Quantity" class="form-control" />
+                <span asp-validation-for="@Model.InvoicesItems[i].Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.InvoicesItems[i].Price" class="control-label"></label>
+                <input asp-for="@Model.InvoicesItems[i].Price" class="form-control" />
+                <span asp-validation-for="@Model.InvoicesItems[i].Price" class="text-danger"></span>
+            </div>
+        }
+    </div>
+    <button type="button" class="btn btn-primary" onclick="addInvoiceItem()">إضافة عنصر</button>
+
+    <div class="form-group">
+        <label>المبلغ الإجمالي</label>
+        <input type="text" id="TotalAmount" asp-for="TotalAmount" class="form-control" readonly />
+    </div>
+
+    <button type="submit" class="btn btn-success">حفظ الفاتورة</button>
+</form>
+
+<a href="@Url.Action("Index")">عودة إلى القائمة</a>
+

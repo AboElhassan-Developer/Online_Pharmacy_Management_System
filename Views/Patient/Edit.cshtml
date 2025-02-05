@@ -1,0 +1,104 @@
+﻿@* @model Online_Pharmacy_Management_System.ViewModel.EditPatientModel
+@{
+    ViewData["Title"] = "Edit Patient";
+}
+<h1 class="text-center text-primary">Edit Medicine</h1>
+<form method="post" asp-action="SaveEdit">
+    <input type="hidden" asp-for="PatientId" />
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label">Phone</label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DateOfBirth" class="form-label">Date of Birth</label>
+        <input asp-for="DateOfBirth" class="form-control" type="date" />
+        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Address" class="form-label">Address</label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-check mb-3">
+        <input asp-for="IsActive" class="form-check-input" type="checkbox" />
+        <label asp-for="IsActive" class="form-check-label">Is Active</label>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+    <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-success">
+            <i class="fas fa-save"></i> Save
+        </button>
+        <a href="/Patient/Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+
+    </form> *@
+
+
+
+        @model Online_Pharmacy_Management_System.ViewModel.PatientViewModel
+
+@{
+    ViewData["Title"] = "Edit Patient";
+}
+
+<h2>Edit Patient</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="PatientId" />
+
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Phone</label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Date of Birth</label>
+        <input asp-for="DateOfBirth" type="date" class="form-control" />
+        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Address</label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Is Active?</label>
+        <input asp-for="IsActive" type="checkbox" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

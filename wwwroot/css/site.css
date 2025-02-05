@@ -1,0 +1,67 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* ????? ???? */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+/* ????? ????? ?????? */
+.navbar {
+    background-color: #0056b3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .navbar .nav-link {
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        .navbar .nav-link:hover {
+            color: #ffc107;
+        }
+
+/* ????? ?????? */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+}
+
+    .footer a {
+        color: #ffc107;
+        text-decoration: none;
+    }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+.btn-primary {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(45deg, #0056b3, #007bff);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }

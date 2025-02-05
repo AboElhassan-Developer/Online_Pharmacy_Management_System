@@ -1,0 +1,45 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.SupplierViewModel
+
+@{
+    ViewData["Title"] = "Edit Supplier";
+}
+
+<h1 class="text-center text-primary">Edit Supplier</h1>
+
+<form method="post" asp-action="Edit">
+    <input type="hidden" asp-for="SupplierId" />
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label fw-bold">Supplier Name</label>
+        <input class="form-control" asp-for="Name" />
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Contact" class="form-label fw-bold">Contact</label>
+        <input class="form-control" asp-for="Contact" />
+        <span class="text-danger" asp-validation-for="Contact"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label fw-bold">Email</label>
+        <input class="form-control" asp-for="Email" type="email" />
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Address" class="form-label fw-bold">Address</label>
+        <input class="form-control" asp-for="Address" />
+        <span class="text-danger" asp-validation-for="Address"></span>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-warning">
+            <i class="fas fa-edit"></i> Update
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Cancel
+        </a>
+    </div>
+</form>
+

@@ -1,0 +1,15 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.RoleViewModel
+
+<h2>Edit Role</h2>
+
+<form asp-controller="Role" asp-action="EditRole" method="post">
+    <input type="hidden" name="id" value="@ViewData["RoleId"]" />
+    <div class="form-group">
+        <label asp-for="RoleName"></label>
+        <input asp-for="RoleName" class="form-control" />
+        <span asp-validation-for="RoleName" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="ManageRoles" class="btn btn-secondary">Cancel</a>
+</form>
+

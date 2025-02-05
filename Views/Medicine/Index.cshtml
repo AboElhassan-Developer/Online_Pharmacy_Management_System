@@ -1,0 +1,79 @@
+﻿@model List<Online_Pharmacy_Management_System.ViewModel.MedicineViewModel>
+@{
+    ViewData["Title"] = "Medicines List";
+}
+
+<h2 class="text-center text-primary">Medicines</h2>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+
+@* <button class="btn btn-secondary mb-3" onclick="window.history.back();">
+    <i class="fas fa-arrow-left"></i> Back
+</button>
+<form method="get" asp-action="Index" class="d-flex mb-3">
+    <input type="text" name="searchTerm" class="form-control me-2" placeholder="Search by Name or Description" value="@ViewData["CurrentFilter"]" />
+    <button type="submit" class="btn btn-primary">
+        <i class="fas fa-search"></i> Search
+    </button>
+</form>
+@if (!Model.Any())
+{
+    <p class="text-center text-danger">No medicines found matching your search criteria.</p>
+} *@
+
+<a asp-action="Add" class="btn btn-primary mb-3">
+    <i class="fas fa-plus"></i> Add New Medicine
+</a>
+
+<table class="table table-hover table-bordered">
+    <thead class="table-dark">
+        <tr>
+            @* <th>#</th> *@
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Description</th>
+            <th>Expiry Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var medicine in Model)
+        {
+            <tr>
+               @*  <td>@medicine.MedicineId</td> *@
+                <td>@medicine.MedicineName</td>
+                <td>@medicine.Price</td>
+                <td>@medicine.Stock</td>
+                <td>@medicine.Description</td>
+                <td>@medicine.ExpiryDate.ToShortDateString()</td>
+              @*   <td>@medicine.Description</td> *@
+               @*  <td>@(medicine.IsAvailable ? "Yes" : "No")</td> *@
+                <td>
+                    <a href="/Medicine/Details/@medicine.MedicineId" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Details
+                    </a>
+
+
+                    <a href="/Medicine/Edit/@medicine.MedicineId" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Edit
+                    </a>
+                    <a href="/Medicine/Delete/@medicine.MedicineId" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

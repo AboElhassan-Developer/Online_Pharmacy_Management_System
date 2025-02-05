@@ -1,0 +1,33 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.OrderViewModel
+
+@{
+    ViewData["Title"] = "Edit Order";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="PatientId">Patient</label>
+        <select asp-for="PatientId" asp-items="Model.Patients" class="form-control"></select>
+        
+    </div>
+    <div class="form-group">
+        <label for="SupplierId">Supplier</label>
+        <select asp-for="SupplierId" asp-items="Model.Suppliers" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label for="OrderDate">Order Date</label>
+        <input asp-for="OrderDate" class="form-control" type="date" />
+    </div>
+    <div class="form-group">
+        <label for="Status">Status</label>
+        <input asp-for="Status" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="TotalAmount">Total Amount</label>
+        <input asp-for="TotalAmount" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Save Changes</button>
+</form>

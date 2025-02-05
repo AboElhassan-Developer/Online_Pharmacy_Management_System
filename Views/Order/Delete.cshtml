@@ -1,0 +1,26 @@
+﻿@model Online_Pharmacy_Management_System.Models.Order
+
+@{
+    ViewData["Title"] = "Delete Order";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Are you sure you want to delete the order with ID @Model.OrderId?</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+</form>
+
+@* <form method="post" asp-action="ConfirmDelete">
+    <input type="hidden" asp-for="OrderId" />
+    <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-danger">
+            <i class="fas fa-trash-alt"></i> Confirm Delete
+        </button>
+        <a href="/Order/Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Cancel
+        </a>
+    </div>
+</form> *@

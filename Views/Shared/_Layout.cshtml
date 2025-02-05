@@ -1,0 +1,85 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Online Pharmacy Management System - Manage medicines, orders, and invoices efficiently.">
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+    <title>@ViewData["Title"] - Online Pharmacy Management System</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Online_Pharmacy_Management_System.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Medicine" asp-action="Index">Medicines</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Patient" asp-action="Index">Patients</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Order" asp-action="Index">Orders</a></li>
+@*                         <li class="nav-item"><a class="nav-link" asp-controller="Invoice" asp-action="Index">Invoices</a></li>
+ *@@*                          <li class="nav-item"><a class="nav-link" asp-controller="InvoiceItem" asp-action="Index">Invoice Items</a></li>
+ *@                        <li class="nav-item"><a class="nav-link" asp-controller="Supplier" asp-action="Index">Suppliers</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Category" asp-action="Index">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="About">About</a></li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item"><a class="nav-link" asp-controller="Admin" asp-action="ManageUsers">Manage Users</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Admin" asp-action="ManageRoles">Manage Roles</a></li>
+                        }
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <span class="nav-link">Welcome, @UserManager.GetUserName(User)</span>
+                            </li>
+                            <li class="nav-item">
+                                <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                                    <button type="submit" class="btn btn-link nav-link">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="bg-light text-center text-secondary py-3 border-top">
+        <div class="container-fluid">
+            &copy; @DateTime.Now.Year - Online Pharmacy Management System -
+            <a asp-controller="Home" asp-action="Privacy" class="text-decoration-none text-primary">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

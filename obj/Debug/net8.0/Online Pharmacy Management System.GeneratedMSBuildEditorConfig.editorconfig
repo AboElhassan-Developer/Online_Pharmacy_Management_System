@@ -1,0 +1,203 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Online_Pharmacy_Management_System
+build_property.RootNamespace = Online_Pharmacy_Management_System
+build_property.ProjectDir = C:\Users\original\OneDrive\Desktop\API\Online Pharmacy Management System\Online Pharmacy Management System\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\original\OneDrive\Desktop\API\Online Pharmacy Management System\Online Pharmacy Management System
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Admin/EditUserRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFVzZXJSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Admin/ManageRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlUm9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Admin/ManageUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Category/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Category/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Invoice/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Invoice/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Invoice/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Invoice/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Invoice/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Medicine/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNpbmVcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Medicine/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNpbmVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Medicine/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNpbmVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Medicine/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNpbmVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Medicine/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNpbmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Order/AddOrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWRkT3JkZXJEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Order/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Order/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Patient/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Patient/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Patient/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Patient/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Role/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZGRSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Role/EditRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxFZGl0Um9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Shared/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFjY2Vzc0RlbmllZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Supplier/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Supplier/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Supplier/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Supplier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/original/OneDrive/Desktop/API/Online Pharmacy Management System/Online Pharmacy Management System/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jgh6peug34

@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // تأكد من وجود ملف Layout أو استبدله بالمناسب
+}
+
+<div class="container text-center mt-5">
+    <div class="alert alert-danger" role="alert">
+        <h1 class="display-4">Access Denied</h1>
+        <p class="lead">You do not have permission to access this page.</p>
+        <hr />
+        <p>If you believe this is an error, please contact the administrator.</p>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary mt-3">Return to Home</a>
+    </div>
+</div>

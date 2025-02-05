@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Online_Pharmacy_Management_System.Models.Order>
+
+@{
+    ViewData["Title"] = "Orders";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+<!-- نموذج البحث -->
+@* <form id="searchForm" class="form-inline mb-3">
+    <input id="searchInput" type="text" class="form-control mr-2" placeholder="Search by Patient Name or Status">
+    <button type="button" id="clearSearch" class="btn btn-secondary ml-2">Clear</button>
+</form> *@
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Patient</th>
+            <th>Supplier</th>
+            <th>Order Date</th>
+            <th>Status</th>
+            <th>Total Amount</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.OrderId</td>
+                <td>@order.Patient.Name</td>
+                <td>@order.Supplier.Name</td>
+                <td>@order.OrderDate.ToString("dd/MM/yyyy")</td>
+                <td>@order.Status</td>
+                <td>@order.TotalAmount</td>
+               
+                <td class="d-flex gap-2">
+                    <a asp-action="Details" asp-route-id="@order.OrderId" class="btn btn-info btn-sm">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@order.OrderId" class="btn btn-warning btn-sm">
+                        <i class="fas fa-edit"></i> Edit
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@order.OrderId" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this order?');">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">Total Orders:</td>
+            <td>@Model.Count()</td>
+            <td>Total Amount:</td>
+            <td>@Model.Sum(o => o.TotalAmount).ToString("C")</td>
+        </tr>
+    </tfoot>
+</table>
+
+<a asp-action="Create" class="btn btn-primary mb-3">
+    <i class="fas fa-plus"></i> Create New Orde
+</a>
+
