@@ -1,0 +1,40 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.LoginUserViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center text-primary">Login</h2>
+            <form asp-action="Login" method="post" class="shadow p-4 rounded bg-white mt-4">
+                <div class="form-group mb-3">
+                    <label asp-for="UserName" class="form-label fw-bold">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                        <input asp-for="UserName" class="form-control" placeholder="Enter your username" />
+                    </div>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Password" class="form-label fw-bold">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password" />
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-check mb-3">
+                    <input asp-for="RememberMe" class="form-check-input" type="checkbox" />
+                    <label asp-for="RememberMe" class="form-check-label">Remember Me</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+                <p class="text-center mt-3">Don't have an account? <a asp-controller="Account" asp-action="Register">Register here</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

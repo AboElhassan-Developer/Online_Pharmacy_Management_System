@@ -1,0 +1,100 @@
+﻿@* @model IEnumerable<Online_Pharmacy_Management_System.ViewModel.InvoiceViewModel>
+
+@{
+    ViewData["Title"] = "Invoices";
+}
+
+<h2>Invoices</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Invoice</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Invoice ID</th>
+            <th>Patient Name</th>
+            <th>Date</th>
+            <th>Total Amount</th>
+            <th>Paid Amount</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var invoice in Model)
+        {
+            <tr>
+                <td>@invoice.InvoiceId</td>
+                <td>@invoice.PatientName</td>
+                <td>@invoice.Date.ToShortDateString()</td>
+                <td>@invoice.TotalAmount.ToString("C")</td>
+                <td>@invoice.PaidAmount.ToString("C")</td>
+                <td>@invoice.Status</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@invoice.InvoiceId">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@invoice.InvoiceId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@invoice.InvoiceId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+ *@
+ @model IEnumerable<Online_Pharmacy_Management_System.Models.Invoice>
+
+@{
+    ViewData["Title"] = "Invoices";
+}
+
+<h2>Invoices</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New Invoice</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Date)
+            </th>
+            <th>
+                Patient
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().TotalAmount)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var invoice in Model)
+            {
+                <tr>
+                    <td>@invoice.Id</td>
+                    <td>@invoice.Date.ToString("dd/MM/yyyy")</td>
+                    <td>@(invoice.Patient != null ? invoice.Patient.Name : "N/A")</td>
+                    <td>@invoice.TotalAmount.ToString("C")</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@invoice.Id" class="btn btn-info btn-sm">Details</a>
+                        <a asp-action="Edit" asp-route-id="@invoice.Id" class="btn btn-primary btn-sm">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@invoice.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5" class="text-center">No invoices available.</td>
+            </tr>
+        }
+    </tbody>
+</table>

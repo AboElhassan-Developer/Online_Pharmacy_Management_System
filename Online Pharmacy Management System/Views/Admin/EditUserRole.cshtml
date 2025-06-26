@@ -1,0 +1,22 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.EditUserRoleViewModel
+
+<h2>Edit User</h2>
+
+<form asp-controller="Admin" asp-action="EditUserRole" method="post" asp-antiforgery="true">
+    <input type="hidden" asp-for="UserId" />
+
+    <div class="form-group">
+        <label>UserName:</label>
+        <input type="text" class="form-control" asp-for="UserName" readonly />
+    </div>
+
+    <div class="form-group">
+        <label>Select New Role:</label>
+        <select class="form-select" asp-for="SelectedRole" asp-items="@(new SelectList(Model.Roles))">
+            <option value="">-- Select Role --</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Save</button>
+    <a asp-action="ManageUsers" class="btn btn-secondary"><i class="fas fa-times"></i> Cancel</a>
+</form>

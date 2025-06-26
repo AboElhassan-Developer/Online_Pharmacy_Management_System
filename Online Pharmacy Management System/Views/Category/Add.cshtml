@@ -1,0 +1,31 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.CategoryViewModel
+@{
+    ViewData["Title"] = "Add Category";
+}
+
+<h1 class="text-center text-primary">Add New Category</h1>
+
+<form method="post" asp-action="Add">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label fw-bold">Category Name</label>
+        <input class="form-control" asp-for="Name" />
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p>@error.ErrorMessage</p>
+            }
+        </div>
+    }
+    <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-save"></i> Save
+        </button>
+        <a class="btn btn-secondary" asp-action="Index">
+            <i class="fas fa-arrow-left"></i> Cancel
+        </a>
+    </div>
+</form>

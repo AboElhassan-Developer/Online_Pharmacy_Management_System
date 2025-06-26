@@ -1,0 +1,35 @@
+﻿@* @model Online_Pharmacy_Management_System.Models.Invoice
+
+@{
+    ViewData["Title"] = "Invoice Details";
+}
+
+<h2>Invoice Details</h2>
+
+<div class="form-group">
+    <label>Patient</label>
+    <p>@Model.Patient.Name</p>
+</div>
+
+<div class="form-group">
+    <label>Date</label>
+    <p>@Model.InvoiceDate.ToShortDateString()</p>
+</div>
+
+<div class="form-group">
+    <label>Total Amount</label>
+    <p>@Model.TotalAmount</p>
+</div>
+
+<div class="form-group">
+    <label>Paid Amount</label>
+    <p>@Model.PaidAmount</p>
+</div>
+
+<div class="form-group">
+    <label>Status</label>
+    <p>@(Model.PaidAmount >= Model.TotalAmount ? "Paid" : "Unpaid")</p>
+</div>
+
+<a href="@Url.Action("Index")" class="btn btn-primary">Back to List</a>
+ *@

@@ -1,0 +1,23 @@
+﻿  @model Online_Pharmacy_Management_System.ViewModel.PatientViewModel
+
+@{
+    ViewData["Title"] = "Delete Patient";
+}
+
+<h2>Delete Patient</h2>
+<h3>Are you sure you want to delete this patient?</h3>
+
+<div>
+    <strong>Name:</strong> @Model.Name <br />
+    <strong>Email:</strong> @Model.Email <br />
+    <strong>Phone:</strong> @Model.Phone <br />
+    <strong>Date of Birth:</strong> @Model.DateOfBirth.ToShortDateString() <br />
+    <strong>Address:</strong> @Model.Address <br />
+    <strong>Is Active:</strong> @(Model.IsActive ? "Yes" : "No") <br />
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="PatientId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

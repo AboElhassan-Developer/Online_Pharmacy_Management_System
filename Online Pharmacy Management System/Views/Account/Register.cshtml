@@ -1,0 +1,55 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.RegisterUserViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center text-primary">Register</h2>
+            <form asp-action="Register" method="post" class="shadow p-4 rounded bg-white mt-4">
+                <div class="form-group mb-3">
+                    <label asp-for="UserName" class="form-label fw-bold">Username</label>
+                    <input asp-for="UserName" class="form-control" placeholder="Enter your username" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Email" class="form-label fw-bold">Email</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Password" class="form-label fw-bold">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password" />
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="ConfirmPassword" class="form-label fw-bold">Confirm Password</label>
+                    <input asp-for="ConfirmPassword" class="form-control" type="password" placeholder="Confirm your password" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+               
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-user-plus"></i> Register
+                </button>
+            </form>
+            <p class="text-center mt-3">
+                Already have an account?
+                <a asp-action="Login" class="text-decoration-none">Login here</a>
+            </p>
+            <div class="text-center mt-3">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-link text-decoration-none">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

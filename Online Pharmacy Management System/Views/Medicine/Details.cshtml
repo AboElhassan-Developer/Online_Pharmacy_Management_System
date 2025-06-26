@@ -1,0 +1,30 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.MedicineViewModel
+@{
+    ViewData["Title"] = "Details Medicine";
+}
+<h1 class="text-center text-primary">Details Medicine</h1>
+<div class="card shadow p-4">
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="row">
+                <dt class="col-sm-4">MedicineName:</dt>
+                <dd class="col-sm-8">@Model.MedicineName</dd>
+
+                
+                <dt class="col-sm-4">Description:</dt>
+                <dd class="col-sm-8">@Model.Description</dd>
+
+                <dt class="col-sm-4">Stock:</dt>
+                <dd class="col-sm-8">@Model.Stock</dd>
+
+                <dt class="col-sm-4">Price:</dt>
+                <dd class="col-sm-8">$@Model.Price</dd>
+
+                <dt class="col-sm-4">ExpiryDate:</dt>
+                <dd class="col-sm-8">@Model.ExpiryDate.ToShortDateString()</dd>
+                <dt class="col-sm-4">IsAvailable ?:</dt>
+                <dd class="col-sm-8">$@(Model.IsAvailable ? "Yes" : "No")</dd>
+            </dl>
+        </div>
+    </div>
+</div>

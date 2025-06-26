@@ -1,0 +1,38 @@
+﻿@model Online_Pharmacy_Management_System.Models.Order
+
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <tr>
+        <th>Order ID</th>
+        <td>@Model.OrderId</td>
+    </tr>
+    <tr>
+        <th>Patient</th>
+        <td>@Model.Patient.Name</td>
+    </tr>
+    <tr>
+        <th>Supplier</th>
+        <td>@Model.Supplier.Name</td>
+    </tr>
+    <tr>
+        <th>Order Date</th>
+        <td>@Model.OrderDate.ToString("dd/MM/yyyy")</td>
+    </tr>
+    <tr>
+        <th>Status</th>
+        <td>@Model.Status</td>
+    </tr>
+    <tr>
+        <th>Total Amount</th>
+        <td>@Model.TotalAmount</td>
+    </tr>
+</table>
+
+<a href="@Url.Action("Edit", "Order", new { id = Model.OrderId })" class="btn btn-warning">Edit</a> |
+<a href="@Url.Action("Delete", "Order", new { id = Model.OrderId })" class="btn btn-danger">Delete</a> |
+<a href="@Url.Action("AddOrderDetail", "Order", new { orderId = Model.OrderId })" class="btn btn-primary">Add Order Detail</a>

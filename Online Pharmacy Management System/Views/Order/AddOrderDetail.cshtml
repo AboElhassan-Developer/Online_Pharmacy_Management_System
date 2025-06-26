@@ -1,0 +1,32 @@
+﻿@model Online_Pharmacy_Management_System.ViewModel.OrderDetailViewModel
+
+@{
+    ViewData["Title"] = "Add Order Detail";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="MedicineId">Medicine</label>
+        <!-- تعديل لعرض أسماء الأدوية بدلاً من الـ MedicineId -->
+        <select asp-for="MedicineId" asp-items="Model.Medicines" class="form-control">
+            <option value="">Select Medicine</option>
+        </select>
+        <span asp-validation-for="MedicineId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Quantity">Quantity</label>
+        <input asp-for="Quantity" class="form-control" type="number" min="1" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Price">Price</label>
+        <input asp-for="Price" class="form-control" type="number" step="0.01" min="0.01" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Add</button>
+</form>
